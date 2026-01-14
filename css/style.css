@@ -1,0 +1,84 @@
+body {
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
+    background-color: rgba(0, 0, 0, 0.418);
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+background: url(../img/bcg.PNG) center/cover no-repeat;
+  background-size: cover;
+  position: relative;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff,
+                 0 0 10px #fff,
+                 0 0 20px #ff00de,
+                 0 0 30px #ff00de,
+                 0 0 40px #ff00de,
+                 0 0 55px #ff00de,
+                 0 0 75px #ff00de;
+  }
+  100% {
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff,
+                 0 0 30px #ff4da6,
+                 0 0 40px #ff4da6,
+                 0 0 50px #ff4da6,
+                 0 0 65px #ff4da6,
+                 0 0 80px #ff4da6;
+  }
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.425);
+  animation: glow 1.5s infinite alternate;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.466);
+  animation: glow 1.5s infinite alternate;
+}
+.game-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px 5px rgba(255, 255, 255, 0.623);
+}
+
+/* Join Form */
+#join input {
+  border-radius: 50px;
+  padding: 12px 20px;
+}
+
+#join button {
+  border-radius: 50px;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
