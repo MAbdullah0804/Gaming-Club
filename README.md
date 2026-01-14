@@ -1,1 +1,2 @@
 # Gaming-Club
+Gaming Club is an interactive web platform for gaming enthusiasts. Built with HTML, CSS (Bootstrap), and JavaScript, it features playable games like Tic Tac Toe and Rock Paper Scissors, a clean join form, and a responsive, modern design. Perfect for showcasing front-end skills and creating a fun, engaging community experience.
