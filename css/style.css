@@ -1,84 +1,192 @@
+/* ===== Global Styles ===== */
 body {
-  font-family: 'Arial', sans-serif;
-  scroll-behavior: smooth;
-    background-color: rgba(0, 0, 0, 0.418);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: #fff;
+    scroll-behavior: smooth;
 }
 
-/* Hero Section */
-.hero {
-  height: 90vh;
-background: url(../img/bcg.PNG) center/cover no-repeat;
-  background-size: cover;
-  position: relative;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+a {
+    text-decoration: none;
 }
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 5px #fff,
-                 0 0 10px #fff,
-                 0 0 20px #ff00de,
-                 0 0 30px #ff00de,
-                 0 0 40px #ff00de,
-                 0 0 55px #ff00de,
-                 0 0 75px #ff00de;
-  }
-  100% {
-    text-shadow: 0 0 10px #fff,
-                 0 0 20px #fff,
-                 0 0 30px #ff4da6,
-                 0 0 40px #ff4da6,
-                 0 0 50px #ff4da6,
-                 0 0 65px #ff4da6,
-                 0 0 80px #ff4da6;
-  }
+
+h1, h2, h5 {
+    font-weight: 700;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    padding: 1rem 2rem;
+    background: #1a1a1a !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ff3c3c !important;
+}
+
+.nav-link {
+    color: #fff !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff3c3c !important;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/hero-bg.jpg') center/cover no-repeat;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.425);
-  animation: glow 1.5s infinite alternate;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
 .hero p {
-  font-size: 1.5rem;
-  color: rgba(0, 0, 0, 0.466);
-  animation: glow 1.5s infinite alternate;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
 }
+
+.hero .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 60, 60, 0.5);
+}
+
+/* ===== Featured Games ===== */
+#games {
+    padding: 4rem 1rem;
+}
+
+#games h2 {
+    color: #ff3c3c;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
 .game-card {
-  border: none;
-  border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+    background: #1c1c1c;
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .game-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 15px 5px rgba(255, 255, 255, 0.623);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 60, 60, 0.4);
 }
 
-/* Join Form */
-#join input {
-  border-radius: 50px;
-  padding: 12px 20px;
+.card-title {
+    color: #ff3c3c;
+    font-size: 1.25rem;
 }
 
-#join button {
-  border-radius: 50px;
+.card-text {
+    color: #ddd;
 }
 
-/* Footer */
+.play-btn {
+    transition: 0.3s;
+}
+
+.play-btn:hover {
+    transform: scale(1.05);
+    background-color: #ff1a1a !important;
+    box-shadow: 0 5px 15px rgba(255, 60, 60, 0.5);
+}
+
+/* ===== Join Section ===== */
+#join {
+    background: linear-gradient(135deg, #1a1a1a, #111);
+}
+
+#join h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #ff3c3c;
+}
+
+#join p {
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+#join form input {
+    border-radius: 50px;
+    padding: 0.75rem 1.2rem;
+    background: #222;
+    border: 1px solid #333;
+    color: #fff;
+    transition: 0.3s;
+}
+
+#join form input:focus {
+    outline: none;
+    border-color: #ff3c3c;
+    box-shadow: 0 0 10px rgba(255,60,60,0.3);
+}
+
+#join form button {
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+#join form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 60, 60, 0.5);
+}
+
+/* ===== Footer ===== */
 footer {
-  font-size: 0.9rem;
+    background: #1a1a1a;
+    color: #ccc;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
+footer p {
+    margin: 0;
+}
 
-  .hero p {
-    font-size: 1rem;
-  }
+/* ===== Responsive ===== */
+@media(max-width:768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    #games h2 {
+        font-size: 2rem;
+    }
+    #join form input, #join form button {
+        width: 80% !important;
+    }
 }
